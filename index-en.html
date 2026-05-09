@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ata'a Mada | Leading Construction & Insulation Company in Saudi Arabia</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Tajawal', 'Montserrat', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': {
+                            DEFAULT: '#0a1e3d',
+                            'light': '#0f2b54',
+                            'lighter': '#153665',
+                            'soft': '#1a427a',
+                        },
+                        'gold': {
+                            DEFAULT: '#b8943a',
+                            'light': '#c8a45c',
+                            'lighter': '#d4b87a',
+                            'pale': '#e8d5b0',
+                            'soft': '#f5ecd8',
+                        },
+                        'cream': '#fafaf8',
+                        'soft-gray': '#f5f5f2',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-delay': 'float 7s ease-in-out 2s infinite',
+                        'pulse-gold': 'pulseGold 3s ease-in-out infinite',
+                        'slide-in-right': 'slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'slide-in-left': 'slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'slide-in-up': 'slideInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-20px)' } },
+                        pulseGold: { '0%, 100%': { boxShadow: '0 0 0 0 rgba(184,148,58,0.4)' }, '50%': { boxShadow: '0 0 0 20px rgba(184,148,58,0)' } },
+                        slideInRight: { '0%': { transform: 'translateX(60px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
+                        slideInLeft: { '0%': { transform: 'translateX(-60px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
+                        slideInUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        scaleIn: { '0%': { transform: 'scale(0.9)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } },
+                        glowPulse: { '0%, 100%': { boxShadow: '0 0 20px rgba(184,148,58,0.15), 0 0 60px rgba(184,148,58,0.05)' }, '50%': { boxShadow: '0 0 35px rgba(184,148,58,0.3), 0 0 80px rgba(184,148,58,0.12)' } },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --navy: #0a1e3d;
+            --navy-light: #0f2b54;
+            --gold: #b8943a;
+            --gold-light: #c8a45c;
+            --gold-pale: #e8d5b0;
+            --cream: #fafaf8;
+            --soft-gray: #f5f5f2;
+        }
+        * { scroll-behavior: smooth; }
+        body {
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
+            background-color: #fafaf8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 40px rgba(10, 30, 61, 0.06);
+        }
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 12px 48px rgba(10, 30, 61, 0.08);
+        }
+        .glass-dark {
+            background: rgba(10, 30, 61, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #b8943a 0%, #d4b87a 30%, #c8a45c 60%, #e8d5b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .text-gold-solid { color: #b8943a; }
+        .border-gold-subtle { border: 1px solid rgba(184, 148, 58, 0.3); }
+        .border-gold-glow { border: 1.5px solid rgba(184, 148, 58, 0.5); box-shadow: 0 0 30px rgba(184, 148, 58, 0.15); }
+        .bg-navy-gradient { background: linear-gradient(160deg, #0a1e3d 0%, #0f2b54 40%, #153665 100%); }
+        .bg-navy-soft { background: linear-gradient(135deg, #0a1e3d 0%, #0f2b54 60%, #1a427a 100%); }
+        .gold-line { height: 3px; width: 80px; background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a); border-radius: 10px; }
+        .gold-line-center { height: 3px; width: 80px; background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a); border-radius: 10px; margin: 0 auto; }
+        .hero-pattern {
+            background-color: #fafaf8;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(184,148,58,0.04) 0%, transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(10,30,61,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(184,148,58,0.02) 0%, transparent 70%),
+                linear-gradient(180deg, #fafaf8 0%, #f5f5f2 50%, #fafaf8 100%);
+        }
+        .hero-geo-lines {
+            position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+            background:
+                linear-gradient(30deg, transparent 49.5%, rgba(184,148,58,0.08) 49.5%, rgba(184,148,58,0.08) 50.5%, transparent 50.5%),
+                linear-gradient(150deg, transparent 49.5%, rgba(10,30,61,0.05) 49.5%, rgba(10,30,61,0.05) 50.5%, transparent 50.5%);
+            background-size: 120px 120px;
+        }
+        .float-card { animation: float 6s ease-in-out infinite; }
+        .float-card-delay { animation: float 7s ease-in-out 2s infinite; }
+        .reveal {
+            opacity: 0; transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left {
+            opacity: 0; transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right {
+            opacity: 0; transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+        .reveal-scale {
+            opacity: 0; transform: scale(0.9);
+            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-scale.visible { opacity: 1; transform: scale(1); }
+        .stat-number { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .card-hover-lift { transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .card-hover-lift:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(10, 30, 61, 0.12); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f5f5f2; }
+        ::-webkit-scrollbar-thumb { background: #c8a45c; border-radius: 10px; }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .pulse-ring { animation: pulseRing 2.5s ease-out infinite; }
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(184,148,58,0.5); }
+            100% { box-shadow: 0 0 0 30px rgba(184,148,58,0); }
+        }
+        .section-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(184,148,58,0.3), transparent); }
+        .vision-card { position: relative; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); overflow: visible; }
+        .vision-card::after {
+            content: ''; position: absolute; bottom: -2px; right: 10%; width: 80%; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(184,148,58,0.6), transparent);
+            border-radius: 4px; transition: all 0.5s ease; opacity: 0;
+        }
+        .vision-card:hover::after { opacity: 1; bottom: 0; right: 5%; width: 90%; }
+        .vision-card .card-badge {
+            position: absolute; top: -16px; left: 24px;
+            background: linear-gradient(135deg, #0a1e3d 0%, #153665 100%);
+            color: #c8a45c; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px;
+            padding: 6px 18px; border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(10,30,61,0.25); z-index: 5; white-space: nowrap;
+        }
+        .vision-card .icon-container {
+            width: 80px; height: 80px; border-radius: 24px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative; z-index: 2; font-size: 34px;
+        }
+        .vision-card:hover .icon-container { transform: translateY(-6px) scale(1.05); box-shadow: 0 20px 40px rgba(184,148,58,0.2); }
+        .vision-card .card-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem; font-weight: 900;
+            position: absolute; bottom: 12px; right: 16px;
+            opacity: 0.04; color: #0a1e3d; pointer-events: none;
+            line-height: 1; transition: all 0.5s ease;
+        }
+        .vision-card:hover .card-number { opacity: 0.08; bottom: 8px; right: 12px; }
+        .vision-connector { position: relative; }
+        .vision-connector::before {
+            content: ''; position: absolute; top: 50%; left: -12px;
+            width: 24px; height: 24px; border-radius: 50%;
+            background: white; border: 2px solid rgba(184,148,58,0.4);
+            z-index: 3; transform: translateY(-50%);
+            box-shadow: 0 0 0 6px rgba(184,148,58,0.06);
+        }
+        @media (max-width: 767px) { .vision-connector::before { display: none; } }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-strong transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span class="text-gold-light font-bold text-xl font-montserrat">A</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-navy tracking-tight leading-tight">Ata'a Mada</h1>
+                        <p class="text-xs text-gold-solid font-medium tracking-wider">عطاء مدى</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-2">
+                    <a href="#home" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">Home</a>
+                    <a href="#about" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">About</a>
+                    <a href="#ceo-message" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">CEO Message</a>
+                    <a href="#vision" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">Vision & Mission</a>
+                    <a href="#services" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">Services</a>
+                    <a href="#projects" class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">Projects</a>
+                    <a href="#contact" class="px-5 py-2.5 text-sm font-semibold text-white rounded-xl hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-xl pulse-ring" style="background-color: var(--navy-light);">Contact</a>
+                    <!-- Language Switcher -->
+                    <a href="index.html" class="ml-2 px-4 py-2 text-sm font-bold text-navy bg-gold-soft/40 border border-gold-pale/50 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all duration-300 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-language text-base"></i> العربية
+                    </a>
+                </div>
+                <button class="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5" id="menuToggle" aria-label="Menu">
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar1"></span>
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar2"></span>
+                    <span class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300 ml-auto" id="bar3"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu fixed inset-0 bg-white/95 backdrop-blur-2xl z-40 lg:hidden flex flex-col items-center justify-center gap-6" id="mobileMenu">
+            <a href="#home" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">Home</a>
+            <a href="#about" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">About</a>
+            <a href="#ceo-message" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">CEO Message</a>
+            <a href="#vision" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">Vision & Mission</a>
+            <a href="#services" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">Services</a>
+            <a href="#projects" class="text-xl font-semibold text-navy hover:text-gold-solid transition-colors mobile-link">Projects</a>
+            <a href="#contact" class="mt-4 px-8 py-3 text-lg font-semibold text-white rounded-xl hover:bg-gold-light transition-all shadow-lg mobile-link" style="background-color: var(--navy-light);">Contact</a>
+            <a href="index.html" class="mt-2 px-6 py-2 text-lg font-bold text-navy bg-gold-soft/40 border border-gold-pale/50 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm mobile-link flex items-center gap-2">العربية</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center hero-pattern overflow-hidden pt-10">
+        <div class="hero-geo-lines"></div>
+        <div class="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-gold-pale/15 blur-3xl"></div>
+        <div class="absolute bottom-1/4 left-10 w-80 h-80 rounded-full bg-navy/5 blur-3xl"></div>
+        <div class="absolute top-1/3 left-1/4 w-40 h-40 rounded-full bg-gold-soft/20 blur-2xl float-card"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-soft/40 border border-gold-pale/50">
+                        <span class="w-2 h-2 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                        <span class="text-sm font-medium text-gold-solid">Leading Saudi Company Since 2010</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-navy leading-tight tracking-tight">
+                        Building <span class="text-gold-gradient">Quality</span><br>Insulating <span class="text-gold-gradient">Perfection</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg">
+                        Ata'a Mada for Contracting and Insulation – Integrated solutions combining advanced engineering with global standards in the world of construction.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#services" class="px-8 py-4 bg-navy-gradient text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-navy/20 transition-all duration-300 hover:-translate-y-1 text-lg">Explore Services</a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-gold-DEFAULT text-gold-solid font-semibold rounded-2xl hover:bg-gold-soft/30 transition-all duration-300 hover:-translate-y-1 text-lg">Request a Quote</a>
+                    </div>
+                    <div class="flex gap-8 pt-6">
+                        <div><span class="text-3xl font-extrabold text-navy stat-number">+500</span><p class="text-sm text-gray-500">Projects Completed</p></div>
+                        <div><span class="text-3xl font-extrabold text-navy stat-number">+14</span><p class="text-sm text-gray-500">Years of Experience</p></div>
+                        <div><span class="text-3xl font-extrabold text-navy stat-number">+200</span><p class="text-sm text-gray-500">Happy Clients</p></div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative w-full">
+                        <div class="glass-strong rounded-3xl p-3 relative z-10 border-gold-subtle shadow-2xl">
+                            <div class="relative w-full h-auto sm:h-96 rounded-2xl overflow-hidden">
+                                <img src="/assets/img/image.png" alt="Ata'a Mada Construction Projects" class="w-full h-full object-cover"
+                                    onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg, #0a1e3d 0%, #0f2b54 40%, #153665 100%)'; this.parentElement.innerHTML += '<div class=\'absolute inset-0 flex items-center justify-center text-gold-light text-6xl\'><i class=\'fas fa-hard-hat\'></i></div>';">
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 glass rounded-2xl px-5 py-3 border-gold-subtle shadow-lg flex items-center gap-2 z-20">
+                                <div class="w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid"><i class="fa-solid fa-hard-hat"></i></div>
+                                <div>
+                                    <p class="text-sm font-bold text-navy whitespace-nowrap">14 Years of Expertise</p>
+                                    <p class="text-xs text-gray-500">In the Contracting Market</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 w-20 h-20 rounded-full border-2 border-dashed border-gold-pale/60 z-0 float-card"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-xs text-gray-400 tracking-wider">Discover More</span>
+            <i class="fa-solid fa-chevron-down text-gold-light text-sm"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <div class="relative">
+                        <div class="w-full h-96 rounded-3xl bg-soft-gray overflow-hidden relative">
+                            <div class="absolute inset-0 bg-navy-gradient opacity-90"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center text-white p-8">
+                                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gold-DEFAULT/30 flex items-center justify-center">
+                                        <i class="fa-solid fa-building text-3xl text-gold-light"></i>
+                                    </div>
+                                    <p class="text-5xl font-extrabold font-montserrat text-gold-light">Ata'a Mada</p>
+                                    <p class="text-lg text-white/80 mt-2">Contracting & Insulation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass rounded-2xl p-6 absolute -bottom-8 -left-6 shadow-xl border-gold-subtle max-w-xs">
+                            <p class="text-sm font-bold text-navy">Over 14 Years of Experience</p>
+                            <p class="text-xs text-gray-500 mt-1">Across the Kingdom and Gulf Markets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right space-y-6">
+                    <span class="text-gold-solid font-semibold text-sm tracking-wider">About Us</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-navy leading-tight">A Leading Saudi Company in <span class="text-gold-gradient">Contracting & Insulation</span></h2>
+                    <div class="gold-line"></div>
+                    <p class="text-gray-600 leading-relaxed text-lg">We are Ata'a Mada for Contracting, Maintenance, Operation, and Insulation Materials. Our headquarters are in Riyadh, serving all regions of the Kingdom in the field of supplying all building materials. We began specializing in insulation materials, and now provide all construction needs, including rock wool, glass wool, PVC pipes, MDF wood, plastic, insulation boards, leak sealants, fiber mesh, MCU coatings, chemical concrete treatments, nails, plaster mesh, block ladders, Isomax and Saptex insulation angles, Hordy of all sizes, blocks, soft burlap, tying wire, bitumen, ceramic rollers, high-quality adhesive, water stop, and grout. We are proud to serve you.</p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <span class="px-4 py-2 rounded-full bg-gold-soft/30 text-gold-solid text-sm font-medium border border-gold-pale/40">General Contracting</span>
+                        <span class="px-4 py-2 rounded-full bg-navy/5 text-navy text-sm font-medium border border-navy/10">Thermal Insulation</span>
+                        <span class="px-4 py-2 rounded-full bg-gold-soft/30 text-gold-solid text-sm font-medium border border-gold-pale/40">Waterproofing</span>
+                        <span class="px-4 py-2 rounded-full bg-navy/5 text-navy text-sm font-medium border border-navy/10">Fire Resistance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO MESSAGE -->
+    <section id="ceo-message" class="relative py-28 bg-white overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-[700px] h-[700px] rounded-full bg-gold-pale/5 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
+            <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-navy/3 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+            <div class="absolute top-20 right-0 w-64 h-px bg-gradient-to-r from-transparent to-gold/20"></div>
+            <div class="absolute bottom-20 left-0 w-64 h-px bg-gradient-to-l from-transparent to-gold/20"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal-left">
+                    <div class="relative mx-auto max-w-md">
+                        <div class="absolute -inset-10 rounded-full bg-navy-gradient opacity-5 blur-2xl animate-pulse"></div>
+                        <div class="absolute -inset-6 rounded-full border border-dashed border-gold/20 animate-float"></div>
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                            <div class="w-full h-full bg-navy-gradient flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent z-10"></div>
+                                <i class="fa-solid fa-user-tie text-8xl text-gold-light/80 relative z-20"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-64 glass-strong rounded-2xl p-5 text-center border-gold-subtle shadow-xl">
+                            <p class="font-extrabold text-navy text-xl">Eng. Fahad Al-Anzi</p>
+                            <p class="text-gold-solid font-semibold text-sm tracking-wider">Chief Executive Officer</p>
+                            <div class="w-12 h-0.5 bg-gold-DEFAULT mx-auto mt-2 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right space-y-8 text-center lg:text-left">
+                    <div>
+                        <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">CEO MESSAGE</span>
+                        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">A Message from <span class="text-gold-gradient">Leadership</span></h2>
+                    </div>
+                    <div class="relative">
+                        <svg class="absolute top-0 left-0 w-20 h-20 text-gold-light/15 -translate-y-6 -translate-x-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/>
+                        </svg>
+                        <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed font-medium relative z-10">"At Ata'a Mada, we believe that excellence is not just a goal – it is a way of life. Since our establishment, we have solidified our position as a leading company in the contracting and insulation sector by adhering to the highest standards of quality and safety."</p>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-lg">We always strive to provide innovative solutions that meet our clients' aspirations and exceed their expectations. Our team of engineers and experts is ready to face the toughest challenges and turn them into success stories.</p>
+                    <div class="flex items-center justify-center lg:justify-start gap-4 pt-4">
+                        <div class="gold-line"></div>
+                        <span class="text-navy font-bold italic whitespace-nowrap">"Unmatched Quality, Endless Commitment"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION / MISSION / VALUES -->
+    <section id="vision" class="pt-16 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-gold-pale/6 blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-navy/3 blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">Our Identity</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">Vision · Mission · <span class="text-gold-gradient">Values</span></h2>
+                <div class="gold-line-center mt-5"></div>
+                <p class="text-gray-400 mt-4 max-w-lg mx-auto text-sm">The foundations upon which we build every project, every relationship, and every success.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 relative">
+                <div class="vision-card reveal-scale relative" style="transition-delay: 0s;">
+                    <div class="glass-strong rounded-3xl p-8 md:p-10 pb-12 relative h-full border-gold-subtle card-hover-lift overflow-hidden group">
+                        <div class="card-badge">Our Vision</div>
+                        <span class="card-number">01</span>
+                        <div class="icon-container bg-gradient-to-br from-gold-soft/60 to-gold-pale/30 shadow-md group-hover:from-gold-soft group-hover:to-gold-pale/50 transition-all duration-500">
+                            <i class="fa-solid fa-bullseye text-gold-solid"></i>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-extrabold text-navy mb-5 text-center relative z-2">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed text-center relative z-2">To be the first choice in the Kingdom of Saudi Arabia and the Gulf region in the fields of contracting and insulation, contributing to the realization of Saudi Vision 2030 through sustainable, high-quality projects.</p>
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-gold-DEFAULT/30 rounded-full group-hover:w-16 group-hover:bg-gold-DEFAULT/60 transition-all duration-500"></div>
+                    </div>
+                </div>
+                <div class="vision-card reveal-scale relative vision-connector" style="transition-delay: 0.15s;">
+                    <div class="glass-strong rounded-3xl p-8 md:p-10 pb-12 relative h-full border-gold-glow card-hover-lift overflow-hidden group animate-glow-pulse">
+                        <div class="card-badge">Our Mission</div>
+                        <span class="card-number">02</span>
+                        <div class="icon-container bg-gradient-to-br from-navy/5 to-navy/10 shadow-md group-hover:from-navy/10 group-hover:to-navy/20 transition-all duration-500">
+                            <i class="fa-solid fa-rocket text-navy"></i>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-extrabold text-navy mb-5 text-center relative z-2">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed text-center relative z-2">Delivering integrated engineering solutions in contracting, thermal insulation, waterproofing, and fire resistance systems with the highest standards of quality and safety, committed to innovation and sustainability.</p>
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-gold-DEFAULT/30 rounded-full group-hover:w-16 group-hover:bg-gold-DEFAULT/60 transition-all duration-500"></div>
+                    </div>
+                </div>
+                <div class="vision-card reveal-scale relative" style="transition-delay: 0.3s;">
+                    <div class="glass-strong rounded-3xl p-8 md:p-10 pb-12 relative h-full border-gold-subtle card-hover-lift overflow-hidden group">
+                        <div class="card-badge">Our Values</div>
+                        <span class="card-number">03</span>
+                        <div class="icon-container bg-gradient-to-br from-gold-soft/60 to-gold-pale/30 shadow-md group-hover:from-gold-soft group-hover:to-gold-pale/50 transition-all duration-500">
+                            <i class="fa-solid fa-gem text-gold-solid"></i>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-extrabold text-navy mb-5 text-center relative z-2">Our Values</h3>
+                        <p class="text-gray-600 leading-relaxed text-center relative z-2">Quality first – Integrity and transparency – Continuous innovation – Commitment to deadlines – Social responsibility – Sustainable professional development.</p>
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-10 h-0.5 bg-gold-DEFAULT/30 rounded-full group-hover:w-16 group-hover:bg-gold-DEFAULT/60 transition-all duration-500"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center reveal">
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-navy/3 border border-navy/5">
+                    <span class="w-2 h-2 rounded-full bg-gold-DEFAULT"></span>
+                    <span class="text-navy/60 text-sm font-medium">These principles guide every step we take at Ata'a Mada</span>
+                    <span class="w-2 h-2 rounded-full bg-gold-DEFAULT"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="pt-16 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-gold-pale/5 blur-3xl -translate-y-1/3 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-navy/2 blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">What We Offer</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">Integrated <span class="text-gold-gradient">Services</span></h2>
+                <div class="gold-line-center mt-5"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">We provide a comprehensive range of contracting and insulation solutions to global standards.</p>
+            </div>
+            <div class="space-y-6 lg:space-y-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 reveal">
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-gold-pale/20 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none lg:rounded-l-2xl overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">1</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Thermal Insulation</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Advanced thermal insulation systems for roofs and walls using high-efficiency materials – all sizes of insulating foam boards – reducing energy consumption by up to 40%.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-gold-pale/20 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">2</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Waterproofing</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Comprehensive waterproofing solutions for roofs, tanks, bathrooms, and underground structures – bitumen, Water Stop – chemical concrete treatments with the latest technologies.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none lg:rounded-r-2xl overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">3</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-shield-haltered"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Fire Resistance</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Internationally certified fire protection systems – rock and glass wool – MCU insulation coatings – fire-resistant paints and structural insulation.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 reveal">
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-gold-pale/20 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none lg:rounded-l-2xl overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">4</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Leak Protection</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Detection and treatment of water leaks – fibers and leak sealants – Fiber Mesh – advanced treatments to ensure the safety of facilities.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-gold-pale/20 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">5</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Building Insulation</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Comprehensive insulation for residential and commercial buildings – protective insulation boards – Isomax and Saptex angles – nylon plastic – plaster mesh – block ladders.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative flex items-start gap-5 p-8 lg:p-10 hover:bg-gold-soft/10 transition-all duration-700 cursor-default rounded-2xl lg:rounded-none lg:rounded-r-2xl overflow-hidden">
+                        <div class="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-gold-DEFAULT to-gold-light group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <span class="absolute bottom-4 right-6 text-8xl font-extrabold text-navy/10 select-none group-hover:text-navy/5 transition-colors duration-700">6</span>
+                        <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-navy-gradient flex items-center justify-center text-2xl text-gold-light shadow-lg group-hover:scale-110 group-hover:rotate-3 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-10">
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+                        <div class="flex-1 min-w-0 relative z-10">
+                            <h3 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Construction Supply</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">Supply of all building and insulation materials – PVC pipes – MDF wood – nails – soft burlap – tying wire – ceramic rollers – high-quality adhesive – grout – blocks – Hordy.</p>
+                            <div class="mt-4 flex items-center gap-1 text-gold-solid text-xs font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-4 group-hover:translate-x-0">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-center reveal">
+                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gold-soft/30 border border-gold-pale/40">
+                    <span class="w-2 h-2 rounded-full bg-gold-DEFAULT"></span>
+                    <span class="text-gold-solid text-sm font-medium">Integrated solutions for your projects with global standards</span>
+                    <span class="w-2 h-2 rounded-full bg-gold-DEFAULT"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="py-24 bg-navy-gradient relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(184,148,58,0.5) 0%, transparent 50%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-white/5 border border-white/10 text-gold-light/80 font-semibold text-xs tracking-widest uppercase mb-4">Numbers Speak</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 leading-tight">Ata'a Mada <span class="text-gold-gradient">Statistics</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                <div class="reveal group relative"><div class="glass-dark rounded-3xl p-8 text-center h-full border border-white/5 hover:border-gold/30 transition-all duration-500 hover:bg-white/[0.08] flex flex-col items-center justify-center relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-2xl text-gold-light group-hover:scale-110 group-hover:bg-gold/10 transition-all duration-500 relative z-10"><i class="fa-solid fa-building-flag"></i></div><p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-light stat-number counter relative z-10" data-target="500">0</p><p class="text-2xl font-extrabold text-gold-DEFAULT/60 relative z-10">+</p><p class="text-white/60 mt-2 text-sm font-medium relative z-10">Projects Completed</p><div class="w-12 h-0.5 bg-gold-DEFAULT/40 mx-auto mt-3 rounded-full group-hover:w-20 group-hover:bg-gold transition-all duration-500 relative z-10"></div></div></div>
+                <div class="reveal group relative" style="transition-delay: 0.1s;"><div class="glass-dark rounded-3xl p-8 text-center h-full border border-white/5 hover:border-gold/30 transition-all duration-500 hover:bg-white/[0.08] flex flex-col items-center justify-center relative overflow-hidden"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-2xl text-gold-light group-hover:scale-110 group-hover:bg-gold/10 transition-all duration-500 relative z-10"><i class="fa-solid fa-clock"></i></div><p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-light stat-number counter relative z-10" data-target="14">0</p><p class="text-2xl font-extrabold text-gold-DEFAULT/60 relative z-10">+</p><p class="text-white/60 mt-2 text-sm font-medium relative z-10">Years Experience</p><div class="w-12 h-0.5 bg-gold-DEFAULT/40 mx-auto mt-3 rounded-full group-hover:w-20 group-hover:bg-gold transition-all duration-500 relative z-10"></div></div></div>
+                <div class="reveal group relative" style="transition-delay: 0.2s;"><div class="glass-dark rounded-3xl p-8 text-center h-full border border-white/5 hover:border-gold/30 transition-all duration-500 hover:bg-white/[0.08] flex flex-col items-center justify-center relative overflow-hidden"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-2xl text-gold-light group-hover:scale-110 group-hover:bg-gold/10 transition-all duration-500 relative z-10"><i class="fa-solid fa-handshake"></i></div><p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-light stat-number counter relative z-10" data-target="200">0</p><p class="text-2xl font-extrabold text-gold-DEFAULT/60 relative z-10">+</p><p class="text-white/60 mt-2 text-sm font-medium relative z-10">Happy Clients</p><div class="w-12 h-0.5 bg-gold-DEFAULT/40 mx-auto mt-3 rounded-full group-hover:w-20 group-hover:bg-gold transition-all duration-500 relative z-10"></div></div></div>
+                <div class="reveal group relative" style="transition-delay: 0.3s;"><div class="glass-dark rounded-3xl p-8 text-center h-full border border-white/5 hover:border-gold/30 transition-all duration-500 hover:bg-white/[0.08] flex flex-col items-center justify-center relative overflow-hidden"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-2xl text-gold-light group-hover:scale-110 group-hover:bg-gold/10 transition-all duration-500 relative z-10"><i class="fa-solid fa-award"></i></div><p class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-light stat-number counter relative z-10" data-target="50">0</p><p class="text-2xl font-extrabold text-gold-DEFAULT/60 relative z-10">+</p><p class="text-white/60 mt-2 text-sm font-medium relative z-10">Certifications</p><div class="w-12 h-0.5 bg-gold-DEFAULT/40 mx-auto mt-3 rounded-full group-hover:w-20 group-hover:bg-gold transition-all duration-500 relative z-10"></div></div></div>
+            </div>
+            <div class="mt-16 text-center reveal">
+                <div class="inline-flex flex-wrap items-center justify-center gap-3 px-8 py-4 rounded-full bg-white/5 border border-white/10">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                    <span class="text-white/70 text-sm">We serve all regions of Saudi Arabia – Headquarters in Riyadh</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="py-12 bg-soft-gray relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold-pale/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-navy/3 blur-3xl"></div>
+            <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-white/80 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4 shadow-sm">Why Us</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">What Makes <span class="text-gold-gradient">Ata'a Mada</span> Unique</h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="relative">
+                <div class="hidden lg:block absolute top-16 left-5 right-5 h-0.5 bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+                    <div class="reveal group relative flex flex-col items-center text-center"><div class="hidden lg:flex absolute top-16 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-gold shadow-md group-hover:scale-150 group-hover:bg-gold transition-all duration-700 z-20"></div><div class="relative mb-8"><div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-4xl text-navy group-hover:text-gold transition-colors duration-500 border border-gold-pale/20 group-hover:border-gold/40 relative z-10"><i class="fa-solid fa-circle-check"></i></div><div class="absolute -inset-3 rounded-full border border-dashed border-gold/20 group-hover:border-gold/50 group-hover:rotate-180 transition-all duration-1000"></div></div><h3 class="text-2xl font-extrabold text-navy mb-3 group-hover:text-gold-solid transition-colors duration-500">Certified Quality</h3><p class="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">ISO certifications and international standards – materials compliant with Saudi SASO specifications – rigorous inspection of every product.</p><div class="mt-5 w-8 h-0.5 bg-gold/30 group-hover:w-16 group-hover:bg-gold transition-all duration-500 rounded-full"></div></div>
+                    <div class="reveal group relative flex flex-col items-center text-center" style="transition-delay: 0.15s;"><div class="hidden lg:flex absolute top-16 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-gold shadow-md group-hover:scale-150 group-hover:bg-gold transition-all duration-700 z-20"></div><div class="relative mb-8"><div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-4xl text-navy group-hover:text-gold transition-colors duration-500 border border-gold-pale/20 group-hover:border-gold/40 relative z-10"><i class="fa-solid fa-bolt"></i></div><div class="absolute -inset-3 rounded-full border border-dashed border-gold/20 group-hover:border-gold/50 group-hover:rotate-180 transition-all duration-1000"></div></div><h3 class="text-2xl font-extrabold text-navy mb-3 group-hover:text-gold-solid transition-colors duration-500">Fast Execution</h3><p class="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">Strict adherence to timelines – modern transport fleet – coverage across all regions of the Kingdom from Riyadh.</p><div class="mt-5 w-8 h-0.5 bg-gold/30 group-hover:w-16 group-hover:bg-gold transition-all duration-500 rounded-full"></div></div>
+                    <div class="reveal group relative flex flex-col items-center text-center" style="transition-delay: 0.3s;"><div class="hidden lg:flex absolute top-16 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-gold shadow-md group-hover:scale-150 group-hover:bg-gold transition-all duration-700 z-20"></div><div class="relative mb-8"><div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-4xl text-navy group-hover:text-gold transition-colors duration-500 border border-gold-pale/20 group-hover:border-gold/40 relative z-10"><i class="fa-solid fa-medal"></i></div><div class="absolute -inset-3 rounded-full border border-dashed border-gold/20 group-hover:border-gold/50 group-hover:rotate-180 transition-all duration-1000"></div></div><h3 class="text-2xl font-extrabold text-navy mb-3 group-hover:text-gold-solid transition-colors duration-500">Professional Team</h3><p class="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">Experienced engineers and technicians – continuous training – over 14 years in the Saudi market.</p><div class="mt-5 w-8 h-0.5 bg-gold/30 group-hover:w-16 group-hover:bg-gold transition-all duration-500 rounded-full"></div></div>
+                    <div class="reveal group relative flex flex-col items-center text-center" style="transition-delay: 0.45s;"><div class="hidden lg:flex absolute top-16 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-gold shadow-md group-hover:scale-150 group-hover:bg-gold transition-all duration-700 z-20"></div><div class="relative mb-8"><div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-4xl text-navy group-hover:text-gold transition-colors duration-500 border border-gold-pale/20 group-hover:border-gold/40 relative z-10"><i class="fa-solid fa-sack-dollar"></i></div><div class="absolute -inset-3 rounded-full border border-dashed border-gold/20 group-hover:border-gold/50 group-hover:rotate-180 transition-all duration-1000"></div></div><h3 class="text-2xl font-extrabold text-navy mb-3 group-hover:text-gold-solid transition-colors duration-500">Competitive Prices</h3><p class="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">Best value for money – direct sourcing from suppliers – special offers for major projects.</p><div class="mt-5 w-8 h-0.5 bg-gold/30 group-hover:w-16 group-hover:bg-gold transition-all duration-500 rounded-full"></div></div>
+                </div>
+            </div>
+            <div class="mt-20 text-center reveal">
+                <div class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white shadow-lg border border-gold-pale/40">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                    <span class="text-navy/70 text-sm font-medium">With Ata'a Mada, you are in safe hands</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPMENT & MATERIALS -->
+    <section id="equipment" class="py-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-gold-pale/5 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-navy/2 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">Our Capabilities</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">Equipment <span class="text-gold-gradient">& Materials</span></h2>
+                <div class="gold-line-center mt-5"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm">We use the latest equipment and technologies to ensure high-quality execution.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">
+                <div class="reveal flex flex-col items-center text-center group"><div class="relative mb-6"><div class="w-28 h-28 rounded-full bg-navy-gradient flex items-center justify-center text-4xl text-gold-light shadow-2xl group-hover:scale-110 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-20 border-4 border-white"><i class="fa-solid fa-truck"></i></div><div class="absolute -inset-4 rounded-full bg-gold/10 blur-md group-hover:bg-gold/20 transition-all duration-700"></div></div><div class="w-0.5 h-8 bg-gradient-to-b from-gold/60 to-gold/10 mb-2 group-hover:h-10 transition-all duration-500"></div><div class="glass rounded-2xl p-5 w-full max-w-xs shadow-lg border-gold-subtle group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500 relative"><div class="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-3 bg-gold rounded-t-full"></div><h4 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Modern Transport Fleet</h4><p class="text-gray-500 text-sm leading-relaxed">Advanced trucks and transport equipment – comprehensive coverage of all regions of the Kingdom – fast and safe delivery of construction and insulation materials.</p></div></div>
+                <div class="reveal flex flex-col items-center text-center group" style="transition-delay: 0.1s;"><div class="relative mb-6"><div class="w-28 h-28 rounded-full bg-navy-gradient flex items-center justify-center text-4xl text-gold-light shadow-2xl group-hover:scale-110 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-20 border-4 border-white"><i class="fa-solid fa-microscope"></i></div><div class="absolute -inset-4 rounded-full bg-gold/10 blur-md group-hover:bg-gold/20 transition-all duration-700"></div></div><div class="w-0.5 h-8 bg-gradient-to-b from-gold/60 to-gold/10 mb-2 group-hover:h-10 transition-all duration-500"></div><div class="glass rounded-2xl p-5 w-full max-w-xs shadow-lg border-gold-subtle group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500 relative"><div class="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-3 bg-gold rounded-t-full"></div><h4 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Precision Inspection Devices</h4><p class="text-gray-500 text-sm leading-relaxed">Latest leak detection technologies – thermal insulation inspection devices – high-accuracy humidity and temperature measurement equipment.</p></div></div>
+                <div class="reveal flex flex-col items-center text-center group" style="transition-delay: 0.2s;"><div class="relative mb-6"><div class="w-28 h-28 rounded-full bg-navy-gradient flex items-center justify-center text-4xl text-gold-light shadow-2xl group-hover:scale-110 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-20 border-4 border-white"><i class="fa-solid fa-flask"></i></div><div class="absolute -inset-4 rounded-full bg-gold/10 blur-md group-hover:bg-gold/20 transition-all duration-700"></div></div><div class="w-0.5 h-8 bg-gradient-to-b from-gold/60 to-gold/10 mb-2 group-hover:h-10 transition-all duration-500"></div><div class="glass rounded-2xl p-5 w-full max-w-xs shadow-lg border-gold-subtle group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500 relative"><div class="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-3 bg-gold rounded-t-full"></div><h4 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Internationally Certified Materials</h4><p class="text-gray-500 text-sm leading-relaxed">Insulation materials from the world's best factories – rock and glass wool – foam boards – MCU coatings – bitumen – all compliant with specifications.</p></div></div>
+                <div class="reveal flex flex-col items-center text-center group" style="transition-delay: 0.3s;"><div class="relative mb-6"><div class="w-28 h-28 rounded-full bg-navy-gradient flex items-center justify-center text-4xl text-gold-light shadow-2xl group-hover:scale-110 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-700 relative z-20 border-4 border-white"><i class="fa-solid fa-gears"></i></div><div class="absolute -inset-4 rounded-full bg-gold/10 blur-md group-hover:bg-gold/20 transition-all duration-700"></div></div><div class="w-0.5 h-8 bg-gradient-to-b from-gold/60 to-gold/10 mb-2 group-hover:h-10 transition-all duration-500"></div><div class="glass rounded-2xl p-5 w-full max-w-xs shadow-lg border-gold-subtle group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500 relative"><div class="absolute -top-2 left-1/2 -translate-x-1/2 w-5 h-3 bg-gold rounded-t-full"></div><h4 class="text-xl font-extrabold text-navy mb-2 group-hover:text-gold-solid transition-colors duration-500">Advanced Spray Equipment</h4><p class="text-gray-500 text-sm leading-relaxed">Foam and polyurethane spray systems – waterproofing installation equipment – precision application tools to ensure execution quality.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="py-20 bg-cream relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-gold-pale/15 blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-navy/2 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="inline-block px-5 py-2 rounded-full bg-white/80 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4 shadow-sm">Accreditations</span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">Certificates <span class="text-gold-gradient">& Accreditations</span></h2>
+                <div class="gold-line-center mt-5"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">Quality certificates and official accreditations we proudly hold.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-10">
+                <div class="reveal flex justify-center"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-scroll text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">ISO 9001:2015</span><span class="text-[10px] text-gray-400 mt-1">Quality Management</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.05s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-medal text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">ISO 14001</span><span class="text-[10px] text-gray-400 mt-1">Environmental Management</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.1s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-shield text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">OHSAS 18001</span><span class="text-[10px] text-gray-400 mt-1">Occupational Safety</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.15s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-circle-check text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">SASO Certificate</span><span class="text-[10px] text-gray-400 mt-1">Saudi Standards</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.2s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-trophy text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">Engineers Authority</span><span class="text-[10px] text-gray-400 mt-1">Excellent Rating</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.25s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-building-columns text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">Chamber of Commerce</span><span class="text-[10px] text-gray-400 mt-1">Riyadh Membership</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.3s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-certificate text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">Municipal License</span><span class="text-[10px] text-gray-400 mt-1">Riyadh Municipality</span></div></div>
+                <div class="reveal flex justify-center" style="transition-delay: 0.35s;"><div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-white shadow-2xl border-4 border-gold/20 hover:border-gold-DEFAULT transition-all duration-700 group flex flex-col items-center justify-center text-center p-4 hover:scale-110 cursor-default" style="box-shadow: 0 20px 40px rgba(184,148,58,0.1);"><div class="absolute inset-2 rounded-full border border-dashed border-gold/30 group-hover:border-gold-DEFAULT group-hover:rotate-180 transition-all duration-1000"></div><i class="fa-solid fa-shield-haltered text-3xl text-gold-solid mb-2 group-hover:scale-110 transition-transform duration-500"></i><span class="text-xs font-extrabold text-navy leading-tight">ISO 45001</span><span class="text-[10px] text-gray-400 mt-1">Health & Safety</span></div></div>
+            </div>
+            <div class="mt-16 text-center reveal">
+                <div class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white shadow-lg border border-gold-pale/40">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                    <span class="text-navy/70 text-sm font-medium">Certified Quality in Every Project</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="glass-strong rounded-3xl p-10 sm:p-14 border-gold-glow reveal-scale">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-4">Do You Have a Project <span class="text-gold-gradient">in Planning?</span></h2>
+                <p class="text-gray-600 text-lg mb-8 max-w-xl mx-auto">Let us help you turn your vision into reality. Our team is ready to answer your inquiries and provide a free consultation.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-navy-gradient text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-navy/20 transition-all duration-300 hover:-translate-y-1 text-lg">Request a Quote</a>
+                    <a href="tel:+966500000000" class="px-8 py-4 border-2 border-gold-DEFAULT text-gold-solid font-semibold rounded-2xl hover:bg-gold-soft/30 transition-all duration-300 hover:-translate-y-1 text-lg">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-navy-gradient relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-14 reveal"><span class="text-gold-light/80 font-semibold text-sm tracking-wider">Contact Us</span><h2 class="text-4xl sm:text-5xl font-extrabold text-white mt-2">We Are <span class="text-gold-gradient">Waiting for You</span></h2><div class="gold-line-center mt-4"></div></div>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6 reveal-left">
+                    <div class="glass-dark rounded-2xl p-6 flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-gold-DEFAULT/20 flex items-center justify-center shrink-0 text-xl text-gold-light"><i class="fa-solid fa-location-dot"></i></div><div><h4 class="text-white font-bold">Address</h4><p class="text-white/70 text-sm">Riyadh – Al-Morouj District – King Fahd Road</p></div></div>
+                    <div class="glass-dark rounded-2xl p-6 flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-gold-DEFAULT/20 flex items-center justify-center shrink-0 text-xl text-gold-light"><i class="fa-solid fa-phone"></i></div><div><h4 class="text-white font-bold">Phone</h4><p class="text-white/70 text-sm">+966 11 234 5678</p></div></div>
+                    <div class="glass-dark rounded-2xl p-6 flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-gold-DEFAULT/20 flex items-center justify-center shrink-0 text-xl text-gold-light"><i class="fa-solid fa-envelope"></i></div><div><h4 class="text-white font-bold">Email</h4><p class="text-white/70 text-sm">info@ataamada.sa</p></div></div>
+                </div>
+                <div class="glass-dark rounded-3xl p-8 reveal-right">
+                    <form class="space-y-5">
+                        <input type="text" placeholder="Full Name" class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:border-gold-DEFAULT focus:ring-1 focus:ring-gold-DEFAULT transition-all">
+                        <input type="email" placeholder="Email Address" class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:border-gold-DEFAULT focus:ring-1 focus:ring-gold-DEFAULT transition-all">
+                        <input type="tel" placeholder="Phone Number" class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:border-gold-DEFAULT focus:ring-1 focus:ring-gold-DEFAULT transition-all">
+                        <textarea rows="4" placeholder="Your Message..." class="w-full px-5 py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:border-gold-DEFAULT focus:ring-1 focus:ring-gold-DEFAULT transition-all resize-none"></textarea>
+                        <button type="submit" class="w-full py-4 bg-gold-DEFAULT hover:bg-gold-light text-white font-bold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-gold-DEFAULT/20 text-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-[#070f1f] text-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-lg bg-gold-DEFAULT/20 flex items-center justify-center"><span class="text-gold-light font-bold font-montserrat">A</span></div><span class="text-white font-bold text-lg">Ata'a Mada</span></div><p class="text-sm leading-relaxed">A leading Saudi company in contracting, thermal insulation, waterproofing, and fire resistance systems.</p></div>
+                <div><h4 class="text-white font-bold mb-4">Quick Links</h4><div class="flex flex-col gap-2 text-sm"><a href="#home" class="hover:text-gold-light transition-colors">Home</a><a href="#about" class="hover:text-gold-light transition-colors">About</a><a href="#services" class="hover:text-gold-light transition-colors">Services</a><a href="#projects" class="hover:text-gold-light transition-colors">Projects</a><a href="#contact" class="hover:text-gold-light transition-colors">Contact</a></div></div>
+                <div><h4 class="text-white font-bold mb-4">Follow Us</h4><div class="flex gap-3"><div class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all"><i class="fa-brands fa-x-twitter"></i></div><div class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all"><i class="fa-brands fa-linkedin-in"></i></div><div class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all"><i class="fa-brands fa-youtube"></i></div></div></div>
+            </div>
+            <div class="section-divider mb-8"></div>
+            <div class="text-center text-sm"><p>© 2026 Ata'a Mada Contracting & Insulation. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+        menuToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.add('open');
+                bar1.style.transform = 'translateY(6px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.width = '28px';
+                bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                bar1.style.transform = 'translateY(0) rotate(0)';
+                bar2.style.opacity = '1';
+                bar3.style.width = '20px';
+                bar3.style.transform = 'translateY(0) rotate(0)';
+                document.body.style.overflow = '';
+            }
+        });
+        mobileLinks.forEach(link => link.addEventListener('click', () => {
+            menuOpen = false;
+            mobileMenu.classList.remove('open');
+            bar1.style.transform = 'translateY(0) rotate(0)';
+            bar2.style.opacity = '1';
+            bar3.style.width = '20px';
+            bar3.style.transform = 'translateY(0) rotate(0)';
+            document.body.style.overflow = '';
+        }));
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => revealObserver.observe(el));
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) { counter.textContent = Math.floor(current); requestAnimationFrame(updateCounter); }
+                        else { counter.textContent = target; }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { navbar.style.boxShadow = window.pageYOffset > 100 ? '0 8px 40px rgba(10,30,61,0.1)' : '0 8px 40px rgba(10,30,61,0.06)'; });
+        const heroGeo = document.querySelector('.hero-geo-lines');
+        if (heroGeo) window.addEventListener('scroll', () => { if (window.pageYOffset < 800) heroGeo.style.transform = `translateY(${window.pageYOffset * 0.15}px)`; });
+    </script>
+</body>
+</html>

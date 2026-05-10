@@ -99,7 +99,6 @@
             --gold-pale: #e8d5b0;
             --cream: #fafaf8;
             --soft-gray: #f5f5f2;
-            --vh: 1vh;
         }
 
         * {
@@ -189,11 +188,6 @@
                 radial-gradient(circle at 85% 70%, rgba(10, 30, 61, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, rgba(184, 148, 58, 0.02) 0%, transparent 70%),
                 linear-gradient(180deg, #fafaf8 0%, #f5f5f2 50%, #fafaf8 100%);
-        }
-
-        /* Prevent mobile viewport-height jump (address-bar) for hero */
-        #home {
-            min-height: calc(var(--vh) * 100);
         }
 
         .hero-geo-lines {
@@ -1920,14 +1914,6 @@
         if (heroGeo) {
             window.addEventListener('scroll', () => { if (window.pageYOffset < 800) heroGeo.style.transform = `translateY(${window.pageYOffset * 0.15}px)`; });
         }
-        // Fix mobile 100vh issue: set CSS --vh based on window.innerHeight
-        (function () {
-            function setVh() {
-                document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
-            }
-            setVh();
-            window.addEventListener('resize', setVh);
-        })();
     </script>
 </body>
 

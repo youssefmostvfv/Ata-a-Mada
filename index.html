@@ -454,6 +454,17 @@
                 display: none;
             }
         }
+
+        @media (max-width: 640px) {
+            .hero-geo-lines {
+                background-size: 60px 60px;
+            }
+
+            .glass-strong,
+            .glass {
+                backdrop-filter: blur(10px);
+            }
+        }
     </style>
 </head>
 
@@ -465,7 +476,8 @@
                 <a href="#home" class="flex items-center gap-3 group">
                     <div
                         class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                        <span class="text-gold-light font-bold text-xl font-montserrat"><img src="/assets/img/image.png" alt=""></span>
+                        <span class="text-gold-light font-bold text-xl font-montserrat"><img src="/assets/img/image.png"
+                                alt=""></span>
                     </div>
                     <div>
                         <h1 class="text-xl font-bold text-navy tracking-tight leading-tight">عطاء مدى</h1>
@@ -473,22 +485,21 @@
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-1">
-                    <a href="#home"
+                    <a href="/index.html"
                         class="px-4 py-2 text-gold font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">الرئيسية</a>
-                    <a href="#about"
+                    <a href="/index.html#about"
                         class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">من
                         نحن</a>
-                    <a href="#ceo-message"
+                    <a href="/index.html#ceo-message"
                         class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">كلمة
                         الرئيس</a>
-                    <a href="#vision"
-                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">الرؤية
-                        والرسالة</a>
-                    <a href="#services"
+                    <a href="/thermal-insulation/"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">أنظمة العزل</a>
+                    <a href="/index.html#services"
                         class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">الخدمات</a>
-                    <a href="#projects"
+                    <a href="/Projects/index.html"
                         class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">المشاريع</a>
-                    <a href="#contact"
+                    <a href="/index.html#contact"
                         class="px-5 py-2.5 text-sm font-semibold text-white rounded-xl hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-xl pulse-ring"
                         style="background-color: var(--navy-light);">تواصل معنا</a>
                     <!-- زر تبديل اللغة -->
@@ -506,18 +517,29 @@
                 </button>
             </div>
         </div>
-<div class="mobile-menu fixed inset-0 z-40 lg:hidden flex flex-col items-center justify-center gap-6 bg-navy-gradient overflow-y-auto min-h-screen" id="mobileMenu" style="margin-top: 70px !important;">
-    <a href="#home" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الرئيسية</a>
-    <a href="#about" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">من نحن</a>
-    <a href="#ceo-message" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">كلمة الرئيس</a>
-    <a href="#vision" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الرؤية والرسالة</a>
-    <a href="#services" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الخدمات</a>
-    <a href="#projects" class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">المشاريع</a>
-    <a href="#contact" class="mt-4 px-8 py-3 text-lg font-semibold text-white rounded-xl bg-navy-light hover:bg-gold-DEFAULT transition-all shadow-lg mobile-link">تواصل معنا</a>
-    <a href="english.html" class="mt-2 px-6 py-2 text-lg font-bold text-gold-light bg-white/10 border border-gold/30 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm mobile-link flex items-center gap-2">
-        <i class="fa-solid fa-globe"></i> English
-    </a>
-</div>
+        <div class="mobile-menu fixed inset-0 z-40 lg:hidden flex flex-col items-center justify-center gap-6 bg-navy-gradient overflow-y-auto min-h-screen"
+            id="mobileMenu" style="margin-top: 70px !important;">
+            <a href="../index.html"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الرئيسية</a>
+            <a href="/index.html#about"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">من نحن</a>
+            <a href="/index.html#ceo-message"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">كلمة
+                الرئيس</a>
+            <a href="/thermal-insulation/"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">أنظمة العزل</a>
+            <a href="#services"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الخدمات</a>
+            <a href="/Projects/index.html"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">المشاريع</a>
+            <a href="#contact"
+                class="mt-4 px-8 py-3 text-lg font-semibold text-white rounded-xl bg-navy-light hover:bg-gold-DEFAULT transition-all shadow-lg mobile-link">تواصل
+                معنا</a>
+            <a href="/index-en.html"
+                class="mt-2 px-6 py-2 text-lg font-bold text-gold-light bg-white/10 border border-gold/30 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm mobile-link flex items-center gap-2">
+                <i class="fa-solid fa-globe"></i> English
+            </a>
+        </div>
     </nav>
 
     <!-- ==================== HERO SECTION (صورة بدل اللوجو) ==================== -->

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنظمة العزل | عطاء مدى للمقاولات والعزل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': { DEFAULT: '#0a1e3d', 'light': '#0f2b54', 'lighter': '#153665', 'soft': '#1a427a' },
+                        'gold': { DEFAULT: '#b8943a', 'light': '#c8a45c', 'lighter': '#d4b87a', 'pale': '#e8d5b0', 'soft': '#f5ecd8' },
+                        'cream': '#fafaf8',
+                        'soft-gray': '#f5f5f2',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-15px)' } },
+                        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --navy: #0a1e3d;
+            --navy-light: #0f2b54;
+            --gold: #b8943a;
+            --gold-light: #c8a45c;
+            --gold-pale: #e8d5b0;
+            --cream: #fafaf8;
+            --soft-gray: #f5f5f2;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fafaf8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 40px rgba(10, 30, 61, 0.06);
+        }
+
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 12px 48px rgba(10, 30, 61, 0.08);
+        }
+
+        .bg-navy-gradient {
+            background: linear-gradient(160deg, #0a1e3d 0%, #0f2b54 40%, #153665 100%);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #b8943a 0%, #d4b87a 30%, #c8a45c 60%, #e8d5b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-line {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a);
+            border-radius: 10px;
+        }
+
+        .gold-line-center {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5f2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c8a45c;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(184, 148, 58, 0.3), transparent);
+        }
+
+        .hexagon-grid {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+
+<body class="font-tajawal text-gray-800 antialiased">
+
+    <!-- NAVIGATION (identical to projects page) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-strong transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all">
+                        <span class="text-gold-light font-bold text-xl font-montserrat">A</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-navy leading-tight">عطاء مدى</h1>
+                        <p class="text-xs text-gold-solid font-medium">Ata'a Mada</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="../index.html"
+                        class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all">الرئيسية</a>
+                    <a href="../index.html#about"
+                        class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all">من
+                        نحن</a>
+                    <a href="../index.html#services"
+                        class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all">الخدمات</a>
+                    <a href="/Projects/"
+                        class="px-4 py-2 text-sm font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all">المشاريع</a>
+                    <a href="insulation.html"
+                        class="px-4 py-2 text-sm font-bold text-gold-solid bg-gold-soft/30 rounded-lg transition-all">أنظمة
+                        العزل</a>
+                    <a href="../index.html#contact"
+                        class="px-5 py-2.5 text-sm font-semibold text-white rounded-xl hover:bg-gold-light transition-all shadow-md"
+                        style="background-color: var(--navy-light);">تواصل معنا</a>
+                    <a href="../index-en.html"
+                        class="mr-2 px-4 py-2 text-sm font-bold text-navy bg-gold-soft/40 border border-gold-pale/50 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-base"></i> English
+                    </a>
+                </div>
+                <button class="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+                    id="menuToggle" aria-label="القائمة">
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar1"></span>
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar2"></span>
+                    <span class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300 ml-auto"
+                        id="bar3"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu fixed inset-0 z-40 lg:hidden hidden flex-col items-center justify-center gap-6 bg-navy-gradient overflow-y-auto pt-20"
+            id="mobileMenu">
+            <a href="../index.html"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الرئيسية</a>
+            <a href="../index.html#about"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">من نحن</a>
+            <a href="../index.html#services"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الخدمات</a>
+            <a href="../Projects/"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">المشاريع</a>
+            <a href="insulation.html"
+                class="text-xl font-bold text-gold-light bg-white/10 px-4 py-2 rounded-xl mobile-link">أنظمة العزل</a>
+            <a href="../index.html#contact"
+                class="mt-4 px-8 py-3 text-lg font-semibold text-white rounded-xl bg-navy-light hover:bg-gold-DEFAULT transition-all shadow-lg mobile-link">تواصل
+                معنا</a>
+            <a href="../index-en.html"
+                class="mt-2 px-6 py-2 text-lg font-bold text-gold-light bg-white/10 border border-gold/30 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm mobile-link flex items-center gap-2"><i
+                    class="fa-solid fa-globe"></i> English</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION (Parallax + Floating Elements) -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-navy-gradient opacity-95"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80')] bg-cover bg-center opacity-15"
+            style="transform: translateY(0); will-change: transform;" id="hero-parallax"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <span
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-gold-light font-semibold text-sm tracking-widest uppercase mb-8 animate-fade-in-up"><span
+                    class="w-2 h-2 rounded-full bg-gold-DEFAULT animate-pulse"></span>أنظمة العزل المتكاملة</span>
+            <h1
+                class="text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white mt-6 leading-none tracking-tight animate-scale-in">
+                حلول <span class="text-gold-gradient">العزل</span> المتطورة</h1>
+            <p class="text-lg sm:text-2xl text-white/70 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
+                style="animation-delay:0.3s">نوفر أنظمة عزل عالية الجودة للمباني والمنشآت باستخدام أحدث المواد والتقنيات
+                المعتمدة.</p>
+            <div class="flex flex-wrap justify-center gap-4 mt-10 animate-fade-in-up" style="animation-delay:0.6s">
+                <a href="#contact"
+                    class="px-8 py-4 bg-gold-DEFAULT text-white font-bold rounded-2xl hover:bg-gold-light transition-all shadow-xl">اطلب
+                    عرض سعر</a>
+                <a href="#contact"
+                    class="px-8 py-4 border-2 border-gold text-gold-light font-bold rounded-2xl hover:bg-gold/20 transition-all">تواصل
+                    معنا</a>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-10 left-10 w-20 h-20 rounded-full border-2 border-dashed border-gold/30 animate-float">
+        </div>
+        <div class="absolute top-20 right-20 w-10 h-10 rounded-full bg-gold/20 animate-float"
+            style="animation-delay:1s;"></div>
+        <div class="absolute bottom-0 left-0 right-0"><svg viewBox="0 0 1440 120" fill="none"
+                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                    d="M0 60L48 55C96 50 192 40 288 35C384 30 480 30 576 35C672 40 768 50 864 55C960 60 1056 60 1152 55C1248 50 1344 40 1392 35L1440 30V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V60Z"
+                    fill="#fafaf8" />
+            </svg></div>
+    </section>
+
+<!-- ==================== ركائز الحماية والكفاءة (عرض كامل الشاشة) ==================== -->
+<section id="importance" class="py-24 bg-cream relative overflow-hidden">
+    <!-- خلفية ناعمة -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-gold-pale/10 blur-3xl -translate-x-1/4 -translate-y-1/4"></div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-navy/3 blur-3xl translate-x-1/4 translate-y-1/4"></div>
+        <!-- خطوط زخرفية -->
+        <div class="absolute top-20 right-0 w-40 h-px bg-gradient-to-r from-transparent to-gold/20"></div>
+        <div class="absolute bottom-20 left-0 w-40 h-px bg-gradient-to-l from-transparent to-gold/20"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- رأس القسم -->
+        <div class="text-center mb-16 reveal">
+            <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">
+                أهمية العزل
+            </span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">
+                ركائز <span class="text-gold-gradient">الحماية والكفاءة</span>
+            </h2>
+            <div class="gold-line-center mt-5"></div>
+            <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">
+                العزل الحراري ليس رفاهية، بل ضرورة هندسية لحماية المباني وترشيد الطاقة
+            </p>
+        </div>
+
+        <!-- بطاقة النص الرئيسية (عرض كامل) -->
+        <div class="glass rounded-3xl p-8 md:p-12 reveal shadow-lg border border-gold-pale/20">
+            
+            <!-- إحصائية كبيرة في الأعلى -->
+            <div class="flex flex-col sm:flex-row items-center gap-6 mb-10 text-center sm:text-right">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-navy-gradient flex items-center justify-center text-3xl sm:text-4xl text-gold-light shadow-xl flex-shrink-0">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div>
+                    <span class="text-5xl sm:text-6xl font-extrabold text-gold-solid stat-number">66%</span>
+                    <p class="text-gray-500 text-sm mt-1">من الطاقة الكهربائية المستهلكة في الصيف تذهب لتبريد المبني</p>
+                </div>
+            </div>
+
+            <!-- تعريف العزل الحراري -->
+            <div class="mb-10">
+                <h3 class="text-2xl font-extrabold text-navy mb-5 flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </span>
+                    تعريف العزل الحراري
+                </h3>
+                <p class="text-gray-600 leading-relaxed text-lg mb-5">
+                    يمكن تعريف العزل الحراري على أنه استخدام مواد لها خواص عازلة للحرارة بحيث تساعد على الحد من تسرب الحرارة وانتقالها من خارج المبني إلى داخله صيفاً والعكس في الشتاء. 
+                </p>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    وفي دراسة على أحد المباني، وجدنا أن نسبة <span class="font-bold text-navy bg-gold-soft/30 px-2 py-0.5 rounded">66% من الطاقة الكهربائية المستهلكة في الصيف تذهب لتبريد المبني</span>؛ 
+                    أي إن معظم هذه الطاقة تذهب للتخلص من الحرارة المكتسبة من الجدران والأسقف.
+                </p>
+            </div>
+
+            <!-- ملخص الأهمية -->
+            <div class="mb-10 p-6 bg-navy/[0.02] rounded-2xl border-r-4 border-gold-DEFAULT">
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    ومن هنا تنبع أهمية العزل الحراري؛ إذ أنه يلعب دور كبير في تخفيض استهلاك الطاقة الكهربائية المستخدمة في أغراض التكييف وذلك بالحد من تسرب الحرارة خلال الجدران والأسقف، وهذا بدوره يؤدي إلى وفر كبير.
+                </p>
+            </div>
+
+            <!-- المزايا الرئيسية -->
+            <div>
+                <h3 class="text-2xl font-extrabold text-navy mb-6 flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-lg bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    مزايا العزل الحراري
+                </h3>
+                <p class="text-gray-500 text-sm mb-6">هناك عدة مزايا تجعل العزل الحراري ذا أهمية خاصة في إنشاء المباني:</p>
+                
+                <!-- قائمة المزايا -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-bolt"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">تخفيض الطاقة الكهربائية المستهلكة للتبريد والتدفئة</strong> – مما يقلل فاتورة الكهرباء بشكل ملموس.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-weight-scale"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">تقليل سعة أجهزة التكييف وتكاليف صيانتها</strong> – لأن الحمل الحراري يصبح أقل مع العزل الجيد.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-shield-haltered"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">حماية مواد المبنى من تغيرات درجة الحرارة</strong> – وتحمي الأثاث داخل المبنى من التلف.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-couch"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">رفع مستوى الراحة</strong> – عبر توفير درجة حرارة معتدلة دون تقلبات مزعجة.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-fire-extinguisher"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">مقاومة الحريق</strong> – خاصة عند استخدام مواد غير قابلة للاشتعال مثل الصوف الصخري.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-gold-soft/10 transition-colors duration-300">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-gold-soft/40 flex items-center justify-center text-gold-solid">
+                            <i class="fa-solid fa-leaf"></i>
+                        </span>
+                        <p class="text-gray-600 leading-relaxed"><strong class="text-navy">تقليل الأحمال وحماية البيئة</strong> – خفض استهلاك الطاقة يقلل انبعاثات الكربون، والمواد العازلة خفيفة الوزن تقلل الأحمال الإنشائية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 3. TYPES OF INSULATION (Horizontal Interactive Panels) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy">أنظمة <span
+                        class="text-gold-gradient">العزل</span> الرئيسية</h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="group relative h-96 rounded-3xl overflow-hidden shadow-xl reveal"><img
+                        src="https://images.unsplash.com/photo-1635108190774-1a6e9e7a6b8e?w=600&h=400&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent"></div>
+                    <div class="absolute bottom-0 right-0 p-8 text-white">
+                        <h3 class="text-3xl font-extrabold mb-2">العزل الحراري</h3>
+                        <p class="text-white/80">تقليل انتقال الحرارة وتحسين كفاءة الطاقة</p><a href="#thermal"
+                            class="inline-block mt-4 text-gold-light font-bold hover:underline">معرفة المزيد <i
+                                class="fa-solid fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                <div class="group relative h-96 rounded-3xl overflow-hidden shadow-xl reveal"><img
+                        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent"></div>
+                    <div class="absolute bottom-0 right-0 p-8 text-white">
+                        <h3 class="text-3xl font-extrabold mb-2">العزل المائي</h3>
+                        <p class="text-white/80">حماية الأسطح والخزانات والمنشآت تحت الأرض</p><a href="#waterproof"
+                            class="inline-block mt-4 text-gold-light font-bold hover:underline">معرفة المزيد <i
+                                class="fa-solid fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                <div class="group relative h-96 rounded-3xl overflow-hidden shadow-xl reveal"><img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621c1b0f?w=600&h=400&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent"></div>
+                    <div class="absolute bottom-0 right-0 p-8 text-white">
+                        <h3 class="text-3xl font-extrabold mb-2">عزل التسريبات</h3>
+                        <p class="text-white/80">كشف ومعالجة التسربات بأحدث التقنيات</p><a href="#leaks"
+                            class="inline-block mt-4 text-gold-light font-bold hover:underline">معرفة المزيد <i
+                                class="fa-solid fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+                <div class="group relative h-96 rounded-3xl overflow-hidden shadow-xl reveal"><img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent"></div>
+                    <div class="absolute bottom-0 right-0 p-8 text-white">
+                        <h3 class="text-3xl font-extrabold mb-2">مقاومة الحريق</h3>
+                        <p class="text-white/80">أنظمة حماية معتمدة دوليًا</p><a href="#fire"
+                            class="inline-block mt-4 text-gold-light font-bold hover:underline">معرفة المزيد <i
+                                class="fa-solid fa-arrow-left mr-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== العزل الحراري (Timeline عصري) ==================== -->
+    <section id="thermal" class="py-24 bg-soft-gray relative overflow-hidden">
+        <!-- خلفية هندسية خفيفة -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full"
+                style="background-image: radial-gradient(circle at 20% 50%, var(--gold-pale) 1px, transparent 1px); background-size: 30px 30px;">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span
+                    class="inline-block px-5 py-2 rounded-full bg-white/90 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4 shadow-sm">
+                    العزل الحراري
+                </span>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">
+                    كيف يعمل <span class="text-gold-gradient">العزل الحراري</span>؟
+                </h2>
+                <div class="gold-line-center mt-5"></div>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">
+                    آلية متكاملة تمنع انتقال الحرارة بين الداخل والخارج لتحقيق أقصى كفاءة
+                </p>
+            </div>
+
+            <!-- الخط الزمني الأفقي -->
+            <div class="relative">
+                <!-- خط التوصيل (يظهر على الشاشات الكبيرة) -->
+                <div
+                    class="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-6 relative">
+
+                    <!-- المرحلة 1: المشكلة -->
+                    <div class="reveal group relative flex flex-col items-center text-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-white shadow-xl flex items-center justify-center text-2xl text-navy border-4 border-gold-pale/30 group-hover:border-gold-DEFAULT group-hover:scale-110 transition-all duration-500 relative z-10">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <!-- نقطة التوقف على الخط -->
+                        <div
+                            class="hidden lg:block absolute top-24 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gold-DEFAULT shadow-md z-20">
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy mt-8 mb-3">المشكلة</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">الحرارة الخارجية تخترق الجدران
+                            والأسقف، مما يرفع درجة حرارة المبنى ويجبر المكيفات على العمل بجهد زائد.</p>
+                    </div>
+
+                    <!-- المرحلة 2: الحل -->
+                    <div class="reveal group relative flex flex-col items-center text-center"
+                        style="transition-delay: 0.15s;">
+                        <div
+                            class="w-20 h-20 rounded-full  bg-navy-gradient flex items-center justify-center text-2xl text-soft-gray shadow-2xl border-4 border-white group-hover:scale-110 group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                            <i class="fa-solid fa-shield-haltered"></i>
+                        </div>
+                        <div
+                            class="hidden lg:block absolute top-24 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gold-DEFAULT shadow-md z-20">
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy mt-8 mb-3">الحل</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">نركب مواد عازلة عالية الكثافة
+                            (فلين، صوف صخري، هوردي) تمنع انتقال الحرارة عبر الأسطح المعرضة.</p>
+                    </div>
+
+                    <!-- المرحلة 3: النتيجة -->
+                    <div class="reveal group relative flex flex-col items-center text-center"
+                        style="transition-delay: 0.3s;">
+                        <div
+                            class="w-20 h-20 rounded-full bg-white shadow-xl flex items-center justify-center text-2xl text-navy border-4 border-gold-pale/30 group-hover:border-gold-DEFAULT group-hover:scale-110 transition-all duration-500 relative z-10">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <div
+                            class="hidden lg:block absolute top-24 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gold-DEFAULT shadow-md z-20">
+                        </div>
+                        <h3 class="text-xl font-extrabold text-navy mt-8 mb-3">النتيجة</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">انخفاض استهلاك الكهرباء حتى
+                            40%، راحة حرارية دائمة، وحماية لهيكل المبنى من التمدد والانكماش.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- قسم المنتجات (أسلوب القائمة المعلقة) -->
+            <div class="mt-20 reveal">
+                <h3 class="text-2xl font-extrabold text-navy text-center mb-8">المنتجات <span
+                        class="text-gold-gradient">الأساسية</span></h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div
+                        class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gold-soft/40 flex items-center justify-center text-gold-solid group-hover:bg-gold-DEFAULT group-hover:text-white transition-all">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <span class="font-bold text-navy">الهوردي</span>
+                    </div>
+                    <div
+                        class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gold-soft/40 flex items-center justify-center text-gold-solid group-hover:bg-gold-DEFAULT group-hover:text-white transition-all">
+                            <i class="fa-solid fa-feather"></i>
+                        </div>
+                        <span class="font-bold text-navy">الفلين العازل</span>
+                    </div>
+                    <div
+                        class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gold-soft/40 flex items-center justify-center text-gold-solid group-hover:bg-gold-DEFAULT group-hover:text-white transition-all">
+                            <i class="fa-solid fa-mountain"></i>
+                        </div>
+                        <span class="font-bold text-navy">الصوف الصخري</span>
+                    </div>
+                    <div
+                        class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gold-soft/40 flex items-center justify-center text-gold-solid group-hover:bg-gold-DEFAULT group-hover:text-white transition-all">
+                            <i class="fa-solid fa-glass-water"></i>
+                        </div>
+                        <span class="font-bold text-navy">الصوف الزجاجي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ==================== العزل المائي (Horizontal Bars with Circular Indicators) ==================== -->
+<section id="waterproof" class="py-24 bg-white relative overflow-hidden">
+    <!-- خلفية ناعمة -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-gold-pale/8 blur-3xl -translate-y-1/3 translate-x-1/4"></div>
+        <div class="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-navy/3 blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal">
+            <span class="inline-block px-5 py-2 rounded-full bg-gold-soft/50 border border-gold-pale/60 text-gold-solid font-semibold text-xs tracking-widest uppercase mb-4">
+                العزل المائي
+            </span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy mt-3 leading-tight">
+                أنظمة <span class="text-gold-gradient">العزل المائي</span> المتطورة
+            </h2>
+            <div class="gold-line-center mt-5"></div>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-sm">
+                ثلاث طرق متكاملة لحماية منشأتك من الرطوبة والتسربات بأعلى المعايير الهندسية
+            </p>
+        </div>
+
+        <!-- القضبان الأفقية (3 قضبان) -->
+        <div class="max-w-4xl mx-auto space-y-10">
+            
+            <!-- العزل الإيجابي -->
+            <div class="reveal group relative">
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+                    <!-- الدائرة المؤشرة -->
+                    <div class="relative flex-shrink-0">
+                        <div class="w-24 h-24 rounded-full bg-white shadow-xl border-4 border-gold-pale/50 flex items-center justify-center relative z-10 group-hover:border-gold-DEFAULT transition-colors duration-500">
+                            <span class="text-4xl font-extrabold text-gold-solid stat-number">95%</span>
+                        </div>
+                        <svg class="absolute -top-2 -right-2 w-12 h-12 text-gold-DEFAULT rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="75, 100" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-2xl font-extrabold text-navy">العزل الإيجابي</h3>
+                            <span class="text-gold-solid font-bold text-sm bg-gold-soft/30 px-3 py-1 rounded-full">الخط الأول للحماية</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-lg">يُطبق على السطح الخارجي للمبنى لمواجهة المياه الجوفية والرطوبة قبل دخولها، وهو الحل الأمثل للأساسات والقبو.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العزل السلبي -->
+            <div class="reveal group relative">
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-24 h-24 rounded-full bg-white shadow-xl border-4 border-gold-pale/50 flex items-center justify-center relative z-10 group-hover:border-gold-DEFAULT transition-colors duration-500">
+                            <span class="text-4xl font-extrabold text-gold-solid stat-number">85%</span>
+                        </div>
+                        <svg class="absolute -top-2 -right-2 w-12 h-12 text-gold-DEFAULT rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="65, 100" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-2xl font-extrabold text-navy">العزل السلبي</h3>
+                            <span class="text-gold-solid font-bold text-sm bg-gold-soft/30 px-3 py-1 rounded-full">الحماية الداخلية</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-lg">يُطبق من الداخل ليمنع تسرب المياه بعد اختراقها، مثالي للأقبية والجدران الداخلية والمناطق صعبة الوصول.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العزل السائل -->
+            <div class="reveal group relative">
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+                    <div class="relative flex-shrink-0">
+                        <div class="w-24 h-24 rounded-full bg-white shadow-xl border-4 border-gold-pale/50 flex items-center justify-center relative z-10 group-hover:border-gold-DEFAULT transition-colors duration-500">
+                            <span class="text-4xl font-extrabold text-gold-solid stat-number">90%</span>
+                        </div>
+                        <svg class="absolute -top-2 -right-2 w-12 h-12 text-gold-DEFAULT rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="70, 100" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <h3 class="text-2xl font-extrabold text-navy">العزل السائل</h3>
+                            <span class="text-gold-solid font-bold text-sm bg-gold-soft/30 px-3 py-1 rounded-full">مرونة عالية</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-lg">دهانات ومواد سائلة تشكل غشاءً مرنًا يمنع تسرب المياه، مثالي للأسطح والزوايا المعقدة والمساحات الكبيرة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتجات (حبوب زجاجية) -->
+        <div class="mt-20 reveal">
+            <h3 class="text-2xl font-extrabold text-navy text-center mb-8">المنتجات <span class="text-gold-gradient">المستخدمة</span></h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-full bg-navy-gradient flex items-center justify-center text-white group-hover:bg-gold-DEFAULT transition-all">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <span class="font-bold text-navy">لفائف العزل</span>
+                </div>
+                <div class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-full bg-navy-gradient flex items-center justify-center text-white group-hover:bg-gold-DEFAULT transition-all">
+                        <i class="fa-solid fa-fill-drip"></i>
+                    </div>
+                    <span class="font-bold text-navy">العزل السائل</span>
+                </div>
+                <div class="glass rounded-full px-8 py-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-full bg-navy-gradient flex items-center justify-center text-white group-hover:bg-gold-DEFAULT transition-all">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <span class="font-bold text-navy">Waterproof Membrane</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 6. BUILDING INSULATION SYSTEMS (Icon Columns with Stat Counter) -->
+    <section class="py-20 bg-navy-gradient text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold">أنظمة <span class="text-gold-gradient">عزل
+                        المباني</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 reveal">
+                <div class="glass-dark rounded-3xl p-8">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gold/20 flex items-center justify-center text-3xl text-gold-light">
+                        <i class="fa-solid fa-brick"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">الجدران المعزولة</h4>
+                    <p class="text-white/60">مواد عزل مدمجة داخل الجدران لتقليل الجسور الحرارية.</p><span
+                        class="block text-3xl font-extrabold text-gold-light mt-4">98%</span><span
+                        class="text-white/50 text-sm">كفاءة العزل</span>
+                </div>
+                <div class="glass-dark rounded-3xl p-8">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gold/20 flex items-center justify-center text-3xl text-gold-light">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">مقاومة الحريق</h4>
+                    <p class="text-white/60">أنظمة عزل تتحمل درجات حرارة عالية وتحافظ على سلامة المبنى.</p><span
+                        class="block text-3xl font-extrabold text-gold-light mt-4">1200°C</span><span
+                        class="text-white/50 text-sm">مقاومة الحرارة</span>
+                </div>
+                <div class="glass-dark rounded-3xl p-8">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gold/20 flex items-center justify-center text-3xl text-gold-light">
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-2">مواصفات معتمدة</h4>
+                    <p class="text-white/60">جميع المواد مطابقة للمواصفات السعودية والعالمية.</p><span
+                        class="block text-3xl font-extrabold text-gold-light mt-4">100%</span><span
+                        class="text-white/50 text-sm">مطابقة للمواصفات</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LEAK PREVENTERS (Product Grid with Hexagonal Style) -->
+    <section id="leaks" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy">عوازل <span
+                        class="text-gold-gradient">التسريبات</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Water Stop</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Geo Textile</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-haltered"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Protection Board</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-roll"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Nylon Roll</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Backup Rod</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">Sikaflex</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pipe"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">PVC Water Stop</h5>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center reveal hover:shadow-xl transition-all group">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-navy-gradient rounded-full flex items-center justify-center text-3xl text-gold-light group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h5 class="font-bold text-navy">مواد أخرى</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ADVANTAGES (Numbered Counter with Icons) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy">مميزات <span
+                        class="text-gold-gradient">حلولنا</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center reveal">
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gold-soft/40 flex items-center justify-center text-2xl text-gold-solid">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <p class="font-bold text-navy">تقليل استهلاك الكهرباء</p><span
+                        class="text-gold-solid font-extrabold text-2xl">40%</span>
+                </div>
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-navy/5 flex items-center justify-center text-2xl text-navy">
+                        <i class="fa-solid fa-shield"></i>
+                    </div>
+                    <p class="font-bold text-navy">حماية المبنى</p><span
+                        class="text-gold-solid font-extrabold text-2xl">دائمة</span>
+                </div>
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gold-soft/40 flex items-center justify-center text-2xl text-gold-solid">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <p class="font-bold text-navy">مقاومة الحريق</p><span
+                        class="text-gold-solid font-extrabold text-2xl">عالي</span>
+                </div>
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-navy/5 flex items-center justify-center text-2xl text-navy">
+                        <i class="fa-solid fa-weight-scale"></i>
+                    </div>
+                    <p class="font-bold text-navy">تقليل الأحمال</p><span
+                        class="text-gold-solid font-extrabold text-2xl">خفيف</span>
+                </div>
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gold-soft/40 flex items-center justify-center text-2xl text-gold-solid">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <p class="font-bold text-navy">حماية البيئة</p><span
+                        class="text-gold-solid font-extrabold text-2xl">صديق</span>
+                </div>
+                <div>
+                    <div
+                        class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-navy/5 flex items-center justify-center text-2xl text-navy">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <p class="font-bold text-navy">راحة معيشية</p><span
+                        class="text-gold-solid font-extrabold text-2xl">ممتاز</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MATERIALS (Masonry Gallery) -->
+    <section class="py-20 bg-soft-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy">المواد <span
+                        class="text-gold-gradient">المستخدمة</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="row-span-2 relative group rounded-3xl overflow-hidden h-80 reveal"><img
+                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=600&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-2xl">Rock Wool</span></div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden h-48 reveal"><img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621c1b0f?w=400&h=300&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-xl">Glass Wool</span></div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden h-48 reveal"><img
+                        src="https://images.unsplash.com/photo-1635108190774-1a6e9e7a6b8e?w=400&h=300&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-xl">PVC</span></div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden h-48 reveal"><img
+                        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-xl">PU</span></div>
+                </div>
+                <div class="col-span-2 relative group rounded-3xl overflow-hidden h-48 reveal"><img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=300&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-2xl">Polyisocyanurate</span></div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden h-48 reveal"><img
+                        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-6"><span
+                            class="text-white font-bold text-xl">Protection Board</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TECHNICAL SPECS (Glassmorphism Table with Highlighted Row) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy">المواصفات <span
+                        class="text-gold-gradient">الفنية</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-2xl reveal">
+                <div class="bg-navy-gradient px-6 py-4 flex justify-between text-white font-bold">
+                    <span>الخاصية</span><span>القيمة</span>
+                </div>
+                <div class="divide-y divide-gold-pale/20 bg-white">
+                    <div class="flex justify-between px-6 py-4 hover:bg-gold-soft/10 transition"><span>مقاومة
+                            الحرارة</span><span class="font-bold text-navy">حتى 1200°C</span></div>
+                    <div class="flex justify-between px-6 py-4 hover:bg-gold-soft/10 transition">
+                        <span>الكثافة</span><span class="font-bold text-navy">30 - 200 kg/m³</span>
+                    </div>
+                    <div class="flex justify-between px-6 py-4 hover:bg-gold-soft/10 transition"><span>مقاومة
+                            الضغط</span><span class="font-bold text-navy">حتى 700 kPa</span></div>
+                    <div class="flex justify-between px-6 py-4 hover:bg-gold-soft/10 transition"><span>مقاومة
+                            الماء</span><span class="font-bold text-navy">نفاذية تقارب الصفر</span></div>
+                    <div class="flex justify-between px-6 py-4 hover:bg-gold-soft/10 transition"><span>قوة
+                            الشد</span><span class="font-bold text-navy">عالية جدًا</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CTA (Gradient with Background Pattern) -->
+    <section class="py-20 bg-navy-gradient text-white text-center relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNiODk0M2EiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aC0ydi0yaDJ2MnptMC0yaDJ2LTJoLTJ2MnptLTIgMGgydi0yaC0ydjJ6bS0yLTJoMnYtMmgtMnYyem0tNCA0aDJ2LTJoLTJ2MnptLTIgMGgydi0yaC0ydjJ6bS0yLTJoMnYtMmgtMnYyem0wIDRoMnYtMmgtMnYyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-30">
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">هل تحتاج إلى نظام <span class="text-gold-gradient">عزل
+                    متكامل</span>؟</h2>
+            <p class="text-white/70 text-lg mb-8">نوفر أفضل حلول العزل الحراري والمائي للمشاريع السكنية والتجارية
+                والصناعية.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../index.html#contact"
+                    class="px-8 py-4 bg-gold-DEFAULT text-navy font-bold rounded-2xl hover:bg-gold-light transition-all">تواصل
+                    معنا</a>
+                <a href="../index.html#contact"
+                    class="px-8 py-4 border-2 border-gold text-gold-light font-bold rounded-2xl hover:bg-gold/20 transition-all">اطلب
+                    استشارة مجانية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (identical) -->
+    <footer class="py-12 bg-[#070f1f] text-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gold-DEFAULT/20 flex items-center justify-center"><span
+                                class="text-gold-light font-bold font-montserrat">A</span></div><span
+                            class="text-white font-bold text-lg">عطاء مدى</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">شركة سعودية رائدة في المقاولات والعزل الحراري والمائي وأنظمة
+                        مقاومة الحريق.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">روابط سريعة</h4>
+                    <div class="flex flex-col gap-2 text-sm"><a href="../index.html"
+                            class="hover:text-gold-light transition-colors">الرئيسية</a><a href="../index.html#about"
+                            class="hover:text-gold-light transition-colors">من نحن</a><a href="../index.html#services"
+                            class="hover:text-gold-light transition-colors">الخدمات</a><a href="../index.html#projects"
+                            class="hover:text-gold-light transition-colors">المشاريع</a></div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">تابعنا</h4>
+                    <div class="flex gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider mb-8"></div>
+            <div class="text-center text-sm">
+                <p>© 2026 شركة عطاء مدى للمقاولات والعزل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+        menuToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.offsetHeight;
+                mobileMenu.classList.add('open');
+                bar1.style.transform = 'translateY(6px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.width = '28px';
+                bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                bar1.style.transform = 'translateY(0) rotate(0)';
+                bar2.style.opacity = '1';
+                bar3.style.width = '20px';
+                bar3.style.transform = 'translateY(0) rotate(0)';
+                document.body.style.overflow = '';
+                setTimeout(() => { if (!mobileMenu.classList.contains('open')) mobileMenu.classList.add('hidden'); }, 500);
+            }
+        });
+        mobileLinks.forEach(link => link.addEventListener('click', () => {
+            menuOpen = false;
+            mobileMenu.classList.remove('open');
+            bar1.style.transform = 'translateY(0) rotate(0)';
+            bar2.style.opacity = '1';
+            bar3.style.width = '20px';
+            bar3.style.transform = 'translateY(0) rotate(0)';
+            document.body.style.overflow = '';
+            setTimeout(() => { if (!mobileMenu.classList.contains('open')) mobileMenu.classList.add('hidden'); }, 500);
+        }));
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; revealObserver.unobserve(entry.target); } });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            revealObserver.observe(el);
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { navbar.style.boxShadow = window.pageYOffset > 100 ? '0 8px 40px rgba(10,30,61,0.1)' : '0 8px 40px rgba(10,30,61,0.06)'; });
+        // Parallax hero
+        window.addEventListener('scroll', () => {
+            const parallax = document.getElementById('hero-parallax');
+            if (parallax && window.pageYOffset < window.innerHeight) {
+                parallax.style.transform = `translateY(${window.pageYOffset * 0.15}px)`;
+            }
+        });
+    </script>
+</body>
+
+</html>

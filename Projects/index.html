@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريعنا | عطاء مدى للمقاولات والعزل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': {
+                            DEFAULT: '#0a1e3d',
+                            'light': '#0f2b54',
+                            'lighter': '#153665',
+                            'soft': '#1a427a',
+                        },
+                        'gold': {
+                            DEFAULT: '#b8943a',
+                            'light': '#c8a45c',
+                            'lighter': '#d4b87a',
+                            'pale': '#e8d5b0',
+                            'soft': '#f5ecd8',
+                        },
+                        'cream': '#fafaf8',
+                        'soft-gray': '#f5f5f2',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-15px)' } },
+                        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.9)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+                        slideInLeft: { '0%': { opacity: '0', transform: 'translateX(60px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                        slideInRight: { '0%': { opacity: '0', transform: 'translateX(-60px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --navy: #0a1e3d;
+            --navy-light: #0f2b54;
+            --gold: #b8943a;
+            --gold-light: #c8a45c;
+            --gold-pale: #e8d5b0;
+            --cream: #fafaf8;
+            --soft-gray: #f5f5f2;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fafaf8;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 40px rgba(10, 30, 61, 0.06);
+        }
+
+        .glass-strong {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 12px 48px rgba(10, 30, 61, 0.08);
+        }
+
+        .bg-navy-gradient {
+            background: linear-gradient(160deg, #0a1e3d 0%, #0f2b54 40%, #153665 100%);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #b8943a 0%, #d4b87a 30%, #c8a45c 60%, #e8d5b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-line {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a);
+            border-radius: 10px;
+        }
+
+        .gold-line-center {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #b8943a, #d4b87a, #b8943a);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
+        }
+
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5f2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c8a45c;
+            border-radius: 10px;
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(184, 148, 58, 0.3), transparent);
+        }
+    </style>
+</head>
+
+<body class="font-tajawal text-gray-800 antialiased">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-strong transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div
+                        class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <span class="text-gold-light font-bold text-xl font-montserrat"><img src="/assets/img/image.png"
+                                alt=""></span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-navy tracking-tight leading-tight">عطاء مدى</h1>
+                        <p class="text-xs text-gold-solid font-medium tracking-wider">Ata'a Mada</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="/index.html"
+                        class="px-4 py-2 text-gold font-medium text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">الرئيسية</a>
+                    <a href="/index.html#about"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">من
+                        نحن</a>
+                    <a href="/index.html#ceo-message"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">كلمة
+                        الرئيس</a>
+                    <a href="/thermal-insulation/"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">أنظمة العزل</a>
+                    <a href="/index.html#services"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">الخدمات</a>
+                    <a href="/Projects/index.html"
+                        class="px-4 py-2 text-gold font-medium  text-navy hover:text-gold-solid rounded-lg hover:bg-gold-soft/30 transition-all duration-300">المشاريع</a>
+                    <a href="/Projects/"
+                        class="px-5 py-2.5 text-sm font-semibold text-white rounded-xl hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-xl pulse-ring"
+                        style="background-color: var(--navy-light);">تواصل معنا</a>
+                    <!-- زر تبديل اللغة -->
+                    <a href="index-en.html"
+                        class="mr-2 px-4 py-2 text-sm font-bold text-navy bg-gold-soft/40 border border-gold-pale/50 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all duration-300 shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-base"></i> English
+                    </a>
+                </div>
+                <button class="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+                    id="menuToggle" aria-label="القائمة">
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar1"></span>
+                    <span class="block w-7 h-0.5 bg-navy rounded-full transition-all duration-300" id="bar2"></span>
+                    <span class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300 ml-auto"
+                        id="bar3"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu fixed inset-0 z-40 lg:hidden flex flex-col items-center justify-center gap-6 bg-navy-gradient overflow-y-auto min-h-screen"
+            id="mobileMenu" style="margin-top: 70px !important;">
+            <a href="../index.html"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الرئيسية</a>
+            <a href="/index.html#about"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">من نحن</a>
+            <a href="/index.html#ceo-message"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">كلمة
+                الرئيس</a>
+            <a href="/thermal-insulation/"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">أنظمة العزل</a>
+            <a href="/index.html#services"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">الخدمات</a>
+            <a href="/Projects/"
+                class="text-xl font-semibold text-white hover:text-gold-light transition-colors mobile-link">المشاريع</a>
+            <a href="#contact"
+                class="mt-4 px-8 py-3 text-lg font-semibold text-white rounded-xl bg-navy-light hover:bg-gold-DEFAULT transition-all shadow-lg mobile-link">تواصل
+                معنا</a>
+            <a href="/index-en.html"
+                class="mt-2 px-6 py-2 text-lg font-bold text-gold-light bg-white/10 border border-gold/30 rounded-xl hover:bg-gold-DEFAULT hover:text-white transition-all shadow-sm mobile-link flex items-center gap-2">
+                <i class="fa-solid fa-globe"></i> English
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION (تصميم فاخر) ==================== -->
+    <section id="projects-hero" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+        <!-- خلفية متحركة -->
+        <div class="absolute inset-0 bg-navy-gradient"></div>
+
+        <!-- تأثيرات ضوئية -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold/20 blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gold-light/15 blur-[100px] animate-pulse"
+                style="animation-delay: 1s;"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-navy-light/30 blur-[150px]">
+            </div>
+        </div>
+
+        <!-- شبكة هندسية خلفية -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(rgba(184,148,58,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(184,148,58,0.3) 1px, transparent 1px); background-size: 60px 60px;">
+            </div>
+        </div>
+
+        <!-- خطوط زخرفية -->
+        <div class="absolute top-20 left-0 w-64 h-px bg-gradient-to-r from-transparent to-gold/30"></div>
+        <div class="absolute bottom-20 right-0 w-64 h-px bg-gradient-to-l from-transparent to-gold/30"></div>
+        <div class="absolute top-1/3 left-10 w-px h-32 bg-gradient-to-b from-transparent to-gold/20"></div>
+        <div class="absolute bottom-1/3 right-10 w-px h-32 bg-gradient-to-t from-transparent to-gold/20"></div>
+
+        <!-- دوائر زخرفية -->
+        <div class="absolute top-1/4 left-16 w-4 h-4 rounded-full bg-gold/40 animate-float"></div>
+        <div class="absolute bottom-1/3 right-20 w-3 h-3 rounded-full bg-gold-light/50 animate-float"
+            style="animation-delay: 1.5s;"></div>
+        <div class="absolute top-1/2 left-1/3 w-2 h-2 rounded-full bg-gold-pale/60 animate-float"
+            style="animation-delay: 3s;"></div>
+
+        <!-- محتوى الهيرو -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <!-- شارة علوية -->
+            <span
+                class="inline-flex items-center gap-2 px-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-gold-light font-semibold text-sm tracking-widest uppercase mb-8 animate-fade-in-up shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-gold-DEFAULT animate-pulse"></span>
+                <span>معرض أعمالنا</span>
+                <span class="w-2 h-2 rounded-full bg-gold-DEFAULT animate-pulse" style="animation-delay: 0.5s;"></span>
+            </span>
+
+            <!-- عنوان رئيسي -->
+            <h1
+                class="text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white mt-6 leading-none tracking-tight animate-scale-in">
+                مشاريع<span class="text-gold-gradient"> عطاء مدى</span>
+            </h1>
+
+            <!-- نص وصفي -->
+            <p class="text-lg sm:text-2xl text-white/70 mt-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up"
+                style="animation-delay: 0.3s;">
+                نبني بجودة ونعزل بإتقان — شاهد مجموعة من أبرز مشاريعنا التي تعكس التميز الهندسي والاحترافية في التنفيذ
+            </p>
+
+            <!-- فاصل ذهبي -->
+            <div class="gold-line-center mt-10 animate-fade-in-up" style="animation-delay: 0.6s;"></div>
+
+            <!-- إحصائيات سريعة -->
+            <div class="flex flex-wrap justify-center gap-8 sm:gap-16 my-6 animate-fade-in-up"
+                style="animation-delay: 0.9s;">
+                <div class="text-center">
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-gold-light font-montserrat">+500</span>
+                    <span class="text-sm text-white/50 mt-2">مشروع منجز</span>
+                </div>
+                <div
+                    class="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent self-center hidden sm:block">
+                </div>
+                <div class="text-center">
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-gold-light font-montserrat">+50</span>
+                    <span class="text-sm text-white/50 mt-2">عميل</span>
+                </div>
+                <div
+                    class="w-px h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent self-center hidden sm:block">
+                </div>
+                <div class="text-center">
+                    <span class="block text-4xl sm:text-5xl font-extrabold text-gold-light font-montserrat">+14</span>
+                    <span class="text-sm text-white/50 mt-2">عام خبرة</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- الموجة السفلية -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                    d="M0 60L48 55C96 50 192 40 288 35C384 30 480 30 576 35C672 40 768 50 864 55C960 60 1056 60 1152 55C1248 50 1344 40 1392 35L1440 30V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V60Z"
+                    fill="#fafaf8" />
+            </svg>
+        </div>
+    </section>
+
+    <section id="projects-gallery" class="py-20 bg-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-gold-solid font-semibold text-sm tracking-wider">أعمالنا الرائدة</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-navy mt-3">معرض <span
+                        class="text-gold-gradient">المشاريع</span></h2>
+                <div class="gold-line-center mt-5"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- مشروع 1 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <!-- الصورة -->
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                            alt="مجمع المكاتب الإدارية"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <!-- تراكب معلومات -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">الرياض</span>
+                                <h3 class="text-2xl font-bold text-white">مجمع المكاتب الإدارية</h3>
+                                <p class="text-white/80 text-sm mt-1">عزل حراري ومائي – 15,000 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- نص الكارد -->
+                    <div class="p-6 relative">
+                        <!-- شريط ذهبي علوي -->
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <!-- أيقونة المشروع -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    مجمع المكاتب الإدارية</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">عزل حراري ومائي متكامل لمساحة
+                                    15,000 م² باستخدام أحدث المواد العالمية.</p>
+                            </div>
+                        </div>
+                        <!-- تفاصيل إضافية -->
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>الرياض</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>15,000 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop"
+                            alt="مصنع الصناعات الثقيلة"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">جدة</span>
+                                <h3 class="text-2xl font-bold text-white">مصنع الصناعات الثقيلة</h3>
+                                <p class="text-white/80 text-sm mt-1">مقاومة حريق – 20,000 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    مصنع الصناعات الثقيلة</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">أنظمة مقاومة حريق وعزل صناعي
+                                    لمساحة 20,000 م² باستخدام أحدث التقنيات.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>جدة</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>20,000 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 3 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460186136353-977e9d6085a1?w=600&h=400&fit=crop"
+                            alt="برج الضيافة الفاخر"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">الدمام</span>
+                                <h3 class="text-2xl font-bold text-white">برج الضيافة الفاخر</h3>
+                                <p class="text-white/80 text-sm mt-1">عزل شامل – 8,500 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    برج الضيافة الفاخر</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">عزل شامل للمباني السكنية والتجارية
+                                    مع توريد مواد بناء عالية الجودة.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>الدمام</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>8,500 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 4 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop"
+                            alt="مركز تسوق النخبة"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">الرياض</span>
+                                <h3 class="text-2xl font-bold text-white">مركز تسوق النخبة</h3>
+                                <p class="text-white/80 text-sm mt-1">عزل حراري – 12,000 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-shop"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    مركز تسوق النخبة</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">عزل حراري متكامل لأنظمة التكييف
+                                    والأسقف بمساحة 12,000 م².</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>الرياض</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>12,000 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 5 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop"
+                            alt="مستشفى الحياة"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">جدة</span>
+                                <h3 class="text-2xl font-bold text-white">مستشفى الحياة</h3>
+                                <p class="text-white/80 text-sm mt-1">عزل مائي – 10,000 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-hospital"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    مستشفى الحياة</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">عزل مائي متطور للأسطح والخزانات
+                                    الأرضية لضمان بيئة صحية.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>جدة</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>10,000 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 6 -->
+                <div
+                    class="project-card group bg-white rounded-3xl overflow-hidden shadow-xl border border-gold-pale/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 reveal relative">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop"
+                            alt="فندق الأفق"
+                            class="project-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                            <div
+                                class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span
+                                    class="inline-block bg-gold-DEFAULT text-navy text-xs font-bold px-3 py-1 rounded-full mb-2">الدمام</span>
+                                <h3 class="text-2xl font-bold text-white">فندق الأفق</h3>
+                                <p class="text-white/80 text-sm mt-1">عزل صوتي وحراري – 7,500 م²</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div
+                            class="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-gradient flex items-center justify-center text-xl text-gold-light shadow-lg group-hover:bg-gold-DEFAULT group-hover:text-white transition-all duration-500 relative z-10">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3
+                                    class="text-lg font-extrabold text-navy group-hover:text-gold-solid transition-colors duration-300">
+                                    فندق الأفق</h3>
+                                <p class="text-gray-500 text-sm mt-1 leading-relaxed">عزل صوتي وحراري للغرف والأجنحة
+                                    الفندقية لضمان الراحة التامة.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-gold-pale/20">
+                            <div class="flex items-center gap-1.5 text-gold-solid text-sm font-semibold">
+                                <i class="fa-solid fa-location-dot text-xs"></i>
+                                <span>الدمام</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-regular fa-calendar text-xs"></i>
+                                <span>2025</span>
+                            </div>
+                            <div class="w-1 h-1 rounded-full bg-gold-pale/40"></div>
+                            <div class="flex items-center gap-1.5 text-navy/60 text-sm">
+                                <i class="fa-solid fa-ruler text-xs"></i>
+                                <span>7,500 م²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="py-12 bg-[#070f1f] text-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gold-DEFAULT/20 flex items-center justify-center">
+                            <span class="text-gold-light font-bold font-montserrat">A</span>
+                        </div>
+                        <span class="text-white font-bold text-lg">عطاء مدى</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">شركة سعودية رائدة في المقاولات والعزل الحراري والمائي وأنظمة
+                        مقاومة الحريق.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">روابط سريعة</h4>
+                    <div class="flex flex-col gap-2 text-sm">
+                        <a href="index.html" class="hover:text-gold-light transition-colors">الرئيسية</a>
+                        <a href="index.html#about" class="hover:text-gold-light transition-colors">من نحن</a>
+                        <a href="index.html#services" class="hover:text-gold-light transition-colors">الخدمات</a>
+                        <a href="projects.html" class="hover:text-gold-light transition-colors">المشاريع</a>
+                        <a href="index.html#contact" class="hover:text-gold-light transition-colors">تواصل معنا</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">تابعنا</h4>
+                    <div class="flex gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/5 hover:bg-gold-DEFAULT/30 flex items-center justify-center cursor-pointer transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider mb-8"></div>
+            <div class="text-center text-sm">
+                <p>© 2026 شركة عطاء مدى للمقاولات والعزل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.offsetHeight;
+                mobileMenu.classList.add('open');
+                bar1.style.transform = 'translateY(6px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.width = '28px';
+                bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                bar1.style.transform = 'translateY(0) rotate(0)';
+                bar2.style.opacity = '1';
+                bar3.style.width = '20px';
+                bar3.style.transform = 'translateY(0) rotate(0)';
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    if (!mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }, 500);
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.remove('open');
+                bar1.style.transform = 'translateY(0) rotate(0)';
+                bar2.style.opacity = '1';
+                bar3.style.width = '20px';
+                bar3.style.transform = 'translateY(0) rotate(0)';
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    if (!mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }, 500);
+            });
+        });
+
+        // Reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            revealObserver.observe(el);
+        });
+
+        // Navbar shadow
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.style.boxShadow = window.pageYOffset > 100 ? '0 8px 40px rgba(10,30,61,0.1)' : '0 8px 40px rgba(10,30,61,0.06)';
+        });
+    </script>
+</body>
+
+</html>
